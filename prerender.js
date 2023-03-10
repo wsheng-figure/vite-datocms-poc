@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
 const template = fs.readFileSync(toAbsolute('dist/static/index.html'), 'utf-8')
-const { render } = await import('./dist/server/entry-server.tsx')
+const { render } = await import('./dist/server/entry-server.js')
 
 // determine routes to pre-render from src/pages
 const routesToPrerender = fs

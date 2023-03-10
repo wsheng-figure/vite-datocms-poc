@@ -3,15 +3,6 @@ import './App.css'
 import Header from './components/Header'
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
 
-const DATO_API_TOKEN = 'bb82b0f655a934b55179f8bc60a4b7';
-const client = new GraphQLClient({
-  url: "https://graphql.datocms.com/",
-  headers: {
-    "Authorization": `Bearer ${DATO_API_TOKEN}`,
-    "X-Include-Drafts": "true",
-  }
-});
-
 const pages = import.meta.glob('./pages/*.tsx', { eager: true })
 
 const routes = Object.keys(pages).map((path) => {
@@ -22,6 +13,15 @@ const routes = Object.keys(pages).map((path) => {
     component: pages[path].default,
   }
 })
+
+const DATO_API_TOKEN = 'bb82b0f655a934b55179f8bc60a4b7';
+const client = new GraphQLClient({
+  url: "https://graphql.datocms.com/",
+  headers: {
+    "Authorization": `Bearer ${DATO_API_TOKEN}`,
+    "X-Include-Drafts": "true",
+  }
+});
 
 function App() {
   return (
