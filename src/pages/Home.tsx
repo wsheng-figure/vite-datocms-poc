@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <>
       {/* <section>{data.datoPage.content[3].content}</section> */}
-      <section className="grid grid-cols-2 gap-x-20 items-center mt-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-x-20 items-center mt-8">
       {/* Adding styles to children is not very readable */}
       <div className={`[&>div>h1]:text-4xl [&>div>h1]:font-bold [&>div>p]:mt-6`}>
         {/* Markdown automatically add a div as a wrapper to the mdx items */}
@@ -72,7 +72,7 @@ const Home = () => {
         <img src={data.datoPage.content[3].assets[0].url} alt={data.datoPage.content[3].assets[0].url} />
       </picture>
     </section>
-    <section className={'[&>div]:grid [&>div]:grid-cols-4 [&>div]:gap-x-6'}>
+    <section className={'[&>div]:grid [&>div]:gap-y-8 [&>div]:md:grid-cols-4 [&>div]:md:gap-x-6'}>
       <Markdown options={{
         overrides: {
           SellingPoint

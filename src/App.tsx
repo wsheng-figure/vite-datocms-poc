@@ -34,7 +34,7 @@ function App() {
               {routes.reverse().slice(1).map(({ name, path }, index) => {
                 return (
                   <li key={path}>
-                    <Link className={`bg-teal-300 text-teal-900 font-medium rounded-full px-4 py-2 inline-block w-36 text-center`} to={path}>Another Page</Link>
+                    <Link className={`hidden bg-teal-300 text-teal-900 font-medium rounded-full px-4 py-2 md:inline-block w-36 text-center`} to={path}>Another Page</Link>
                   </li>
                 )
               })}
